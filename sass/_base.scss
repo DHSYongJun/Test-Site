@@ -1,0 +1,15 @@
+$font-stack: (
+    'Jost*',
+    'Helvetica',
+    san-serif
+    );
+
+html, body {
+    font: 100% $font-stack;
+    height: 100%;
+    background-color: $background;
+    margin: auto;
+    a {
+        color: $link-color;
+    }
+}

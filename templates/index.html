@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+        <meta name="author" content="{{ config.extra.author }}">
+        <title>{% block title %}{{ config.title }} - My Webpage{% endblock title %}</title>
+        <link rel="stylesheet" href="{{ get_url(path="main.css") }}"/>
+        <link rel="icon" href="{{ get_url(path="favicon.ico") }}">
+        <link rel="stylesheet" href="https://indestructibletype-fonthosting.github.io/jost.css" type="text/css" charset="utf-8" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+
+            </div>
+            {% if current_url is base_url %}
+                <div class="landing">
+
+                </div>
+            {% endif %}
+            {% block content %}{% endblock content %}
+            <div class="footer">
+
+            </div>
+        </div>
+    </body>
+</html>
